@@ -1,0 +1,24 @@
+@import './base.css';
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --light-purple: #be80ff;
+  --dark-purple: #6325ff;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f3f6f6;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 1300px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
