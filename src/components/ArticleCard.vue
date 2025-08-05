@@ -5,6 +5,14 @@ defineProps({
     required: true,
   },
 })
+
+const categoriesColors = {
+  sciences: ['#be80ff', '#6325ff'],
+  sante: ['#ff6b9f', '#ff4e52'],
+  planete: ['#9fcb5c', '#069849'],
+  maison: ['#fa9761', '#ff5957'],
+  tech: ['#49adfa', '#2a3df7'],
+}
 </script>
 
 <template>
@@ -12,7 +20,13 @@ defineProps({
     <div v-for="article in data" :key="article.id">
       <img :src="article.image" alt="Image de l'article" />
       <div>
-        <p>{{ article.category.toUpperCase() }}</p>
+        <p
+          :style="{
+            backgroundImage: `linear-gradient(0.25turn, ${categoriesColors[article.category][0]}, ${categoriesColors[article.category][1]})`,
+          }"
+        >
+          {{ article.category.toUpperCase() }}
+        </p>
         <p>{{ article.subCategory.toUpperCase() }}</p>
       </div>
       <h2>{{ article.title }}</h2>
@@ -57,7 +71,6 @@ section > div > div {
 
 section > div > div p:first-child {
   font-weight: bold;
-  background: linear-gradient(0.25turn, var(--light-purple), var(--dark-purple));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
