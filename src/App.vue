@@ -10,9 +10,18 @@ import data from './assets/data/articles.json'
   <Header />
   <main class="container">
     <FrontPage :data="data.frontPage" />
-    <ArticleCard :data="data.articlesList" />
+    <section>
+      <ArticleCard v-for="article in data.articlesList" :key="article.id" :article="article" />
+    </section>
   </main>
   <Footer />
 </template>
 
-<style scoped></style>
+<style scoped>
+section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 70px;
+}
+</style>

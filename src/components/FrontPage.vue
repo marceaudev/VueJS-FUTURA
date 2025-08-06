@@ -33,8 +33,6 @@ section {
   margin-top: 50px;
   position: relative;
   display: flex;
-  background-repeat: no-repeat;
-  background-position: bottom;
 }
 
 img {

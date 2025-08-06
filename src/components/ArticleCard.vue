@@ -1,6 +1,6 @@
 <script setup>
 defineProps({
-  data: {
+  article: {
     type: Object,
     required: true,
   },
@@ -16,33 +16,24 @@ const categoriesColors = {
 </script>
 
 <template>
-  <section>
-    <div v-for="article in data" :key="article.id">
-      <img :src="article.image" alt="Image de l'article" />
-      <div>
-        <p
-          :style="{
-            backgroundImage: `linear-gradient(0.25turn, ${categoriesColors[article.category][0]}, ${categoriesColors[article.category][1]})`,
-          }"
-        >
-          {{ article.category.toUpperCase() }}
-        </p>
-        <p>{{ article.subCategory.toUpperCase() }}</p>
-      </div>
-      <h2>{{ article.title }}</h2>
-      <span>{{ article.date }}</span>
+  <div>
+    <img :src="article.image" alt="Image de l'article" />
+    <div>
+      <p
+        :style="{
+          backgroundImage: `linear-gradient(0.25turn, ${categoriesColors[article.category][0]}, ${categoriesColors[article.category][1]})`,
+        }"
+      >
+        {{ article.category.toUpperCase() }}
+      </p>
+      <p>{{ article.subCategory.toUpperCase() }}</p>
     </div>
-  </section>
+    <h2>{{ article.title }}</h2>
+    <span>{{ article.date }}</span>
+  </div>
 </template>
 
 <style scoped>
-section {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-  margin-top: 70px;
-}
-
 section > div {
   height: 480px;
   width: calc((100% - 90px) / 4);
