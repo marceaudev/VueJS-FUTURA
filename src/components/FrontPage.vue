@@ -8,15 +8,16 @@ defineProps({
 </script>
 
 <template>
-  <section>
-    <img :src="data.image" alt="Image de présentation d'un article" />
+  <section :style="{ backgroundImage: `url(${data.image})` }">
     <div>
       <div>
         <div>
           <p>{{ data.category.toUpperCase() }}</p>
           <p>{{ data.subCategory.toUpperCase() }}</p>
         </div>
-        <h1>{{ data.title }}</h1>
+        <h1>
+          <span>{{ data.title }}</span>
+        </h1>
       </div>
       <div>
         <p>{{ data.teaser }}</p>
@@ -32,6 +33,8 @@ section {
   margin-top: 50px;
   position: relative;
   display: flex;
+  background-repeat: no-repeat;
+  background-position: bottom;
 }
 
 img {
@@ -84,11 +87,17 @@ section > div > div > div p:first-child {
 
 h1 {
   font-family: 'Merriweather', serif;
+  font-size: 32px;
+  line-height: 46px;
   color: white;
+  width: 750px;
+  font-weight: bold;
+}
+
+span {
+  padding: 5px;
   background-color: black;
-  width: 65%;
-  font-size: 34px;
-  padding: 10px 3px;
+  white-space: pre-wrap;
 }
 
 section > div > div:last-child {
