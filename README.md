@@ -4,6 +4,8 @@ Exercice 3 of week 2 from the VueJS track at **LeReacteur**.
 
 https://vuejs-futura.netlify.app/
 
+![Demo](./assets/img/proj7.gif)
+
 ---
 
 ## ✅ Project Setup
