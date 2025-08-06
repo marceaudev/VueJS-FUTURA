@@ -4,7 +4,7 @@ Exercice 3 of week 2 from the VueJS track at **LeReacteur**.
 
 https://vuejs-futura.netlify.app/
 
-![Demo](./assets/img/proj7.gif)
+![Demo](https://i.imgur.com/OTG41W4.gif)
 
 ---
 
