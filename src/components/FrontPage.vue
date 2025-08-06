@@ -56,6 +56,7 @@ section > div > div:first-child {
   flex-direction: column;
   position: relative;
   padding: 0 3px;
+  overflow: hidden;
 }
 
 section > div > div:first-child::before {
